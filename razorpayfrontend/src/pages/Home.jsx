@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import useRazorpay from "react-razorpay";
 
@@ -6,7 +6,7 @@ import useRazorpay from "react-razorpay";
 export const Home = ()=>{
 
     const Razorpay = useRazorpay();
-    const [amount,setAmount] = useState();
+    const [amount,setAmount] = useState(0);
 
     // complete order
     const complete_order = (paymentID, orderID, signature)=>{
